@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/webp" sizes="32x32" href="./assets/images/programmer.webp">
+
+  <!-- Tipography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Animations-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Styles -->
+  <link rel="stylesheet" href="./dist/styles.css">
+  <!-- Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer src="./dist/script.js"></script>
+
+  <title>Diana Cruz - Frontend Developer</title>
+</head>
+<body>
+  <img class="shape" src="./assets/images/snakepath.svg" alt="">
+  <div class="toggler">
+    <div class="toggler__burger burger">
+      <span id="bar-a" class="burger__line line-one"></span>
+      <span id="bar-b" class="burger__line line-two"></span>
+      <span id="bar-c" class="burger__line line-three"></span>
+    </div>
+  </div>
+  <header class="header container">
+    <div class="header__logo">
+      <img src="./assets/images/dc-logo.svg" loading="lazy" alt="logo DC Diana Cruz" class="header__logo--img">
+    </div>
+    <nav class="header__nav nav">
+      <ul class="nav__ul">
+        <li class="nav__li">
+          <a class="nav__a nav__a--active" href="#home">
+            Home
+          </a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="#about">
+            About
+          </a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="#services">
+            Services
+          </a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="#portfolio">
+            Portfolio
+          </a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="#contact">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__ssmm ssmm">
+      <a href="https://www.linkedin.com/in/dianacruzpro/" target="_blank" class="ssmm__a">
+        <svg class="ssmm__svg" stroke-width="1.5" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" color="transparent">
+          <path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a href="https://github.com/dianacruzpro" target="_blank" class="ssmm__a">
+        <svg class="ssmm__svg" stroke-width="1.5" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" color="transparent">
+          <path d="M16 22.027v-2.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 00-1.5-3.75 5.07 5.07 0 00-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 00-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 005 5.797a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 00-.94 2.58v2.87M9 20.027c-3 .973-5.5 0-7-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/coding_girl503/" target="_blank" class="ssmm__a">
+        <svg class="ssmm__svg" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" color="transparent">
+          <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M3 16V8a5 5 0 015-5h8a5 5 0 015 5v8a5 5 0 01-5 5H8a5 5 0 01-5-5z" stroke-width="1.5"></path><path d="M17.5 6.51l.01-.011" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      
+    </div>
+  </header>
+  <main class="sections container">
+    <div class="sections__section home" id="home">
+      <div class="home__content" data-aos="fade-in" data-aos-duration="2000">
+        <span class="home__content-span">Hi there!👋 I'm</span>
+        <h1 class="home__content-h1 artistic-text">Diana Cruz</h1>
+        <h2 class="home__content-h2">Frontend Developer</h2>
+        <p class="home__content-p">Addressing design challenges, crafting intuitive user interfaces and meaningful interactions, developing high-performance web and mobile applications.</p>
+        <p class="home__content-p home__content-p--2">"Commitment to quality in web development is not an event, it's a continuous process of constant improvement."</p>
+        <a href="#portfolio" class="home__content-btn btn">
+          <svg class="btn__svg" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="transparent"><path d="M8 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2h-4M8 7V3.6a.6.6 0 01.6-.6h6.8a.6.6 0 01.6.6V7M8 7h8" stroke="#ffffff" stroke-width="1.5"></path></svg>
+          Works
+        </a>
+        <div class="home__content-studying">
+          <span class="home__content-learningtext">Currently learning:</span>
+          <img src="./assets/images/react.svg" alt="react" class="home__content-learningtech">
+        </div>
+      </div>
+      <div class="home__cover" data-aos="zoom-in-up" data-aos-duration="1000">
+        <picture class="home__cover-picture">
+          <source media="(min-width: 880px)" srcset="./assets/images/DEVOP.png">
+          <img class="home__cover-img"  src="" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="sections__section about" id="about">
+      <h2 class="about__h2 artistic-text artistic-text--responsive" data-aos="zoom-out-right">About me</h2>
+      <div class="about__content">
+        <img class="about__img" src="./assets/images/DEVOP.png" alt="Diana Cruz's photo" data-aos="zoom-in-right">
+        <div class="about__text">
+          <p class="about__p" data-aos="zoom-in-left">
+            👩‍💻🎨 From code enthusiast to digital artist. 🎨👩‍💻
+          </p>
+          <p class="about__p" data-aos="zoom-in-left">
+            🧩 My role as a frontend web developer is centered around breathing life into captivating designs through the power of code. 💻✨
+          </p>
+          <p class="about__p" data-aos="zoom-in-left">
+            🌟 My constant pursuit of elegance in simplicity and emotion in every interaction drives me to craft online experiences that seize attention and foster authentic connections. 🌐✨🤝
+          </p>
+          <button class="about__btn btn" data-aos="zoom-in-left">
+            <svg class="btn__svg" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="transparent"><path d="M6 20h12M12 4v12m0 0l3.5-3.5M12 16l-3.5-3.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Curriculum
+          </button>
+        </div>
+      </div>
+      <div class="about__skills skills">
+        <h2 class="skills__h2 artistic-text artistic-text--responsive" data-aos="zoom-out-right">Skills</h2>
+        <div class="skills__cards">
+          <div class="skills__card" data-aos="zoom-out-up">
+            <img class="skills__card-img" src="./assets/images/html.svg" alt="icon skill">
+            <span class="skills__card-title">HTML</span>
+          </div>
+          <div class="skills__card" data-aos="zoom-out-up">
+            <img class="skills__card-img" src="./assets/images/css.svg" alt="icon skill">
+            <span class="skills__card-title">CSS</span>
+          </div>
+          <div class="skills__card" data-aos="zoom-out-up">
+            <img class="skills__card-img" src="./assets/images/javascript.svg" alt="icon skill">
+            <span class="skills__card-title">JavaScript</span>
+          </div>
+          <div class="skills__card" data-aos="zoom-out-up">
+            <img class="skills__card-img" src="./assets/images/scss.svg" alt="icon skill">
+            <span class="skills__card-title">scss</span>
+          </div>
+          <div class="skills__card" data-aos="zoom-out-up">
+            <img class="skills__card-img" src="./assets/images/bootstrap.svg" alt="icon skill">
+            <span class="skills__card-title">Bootstrap</span>
+          </div>
+          <div class="skills__card" data-aos="zoom-out-up">
+            <img class="skills__card-img" src="./assets/images/php.svg" alt="icon skill">
+            <span class="skills__card-title">PHP</span>
+          </div>
+          <div class="skills__card" data-aos="zoom-out-up">
+            <img class="skills__card-img" src="./assets/images/mysql.svg" alt="icon skill">
+            <span class="skills__card-title">MySQL</span>
+          </div>
+          <div class="skills__card" data-aos="zoom-out-up">
+            <img class="skills__card-img" src="./assets/images/nodejs.svg" alt="icon skill">
+            <span class="skills__card-title">Node JS</span>
+          </div>
+          <div class="skills__card" data-aos="zoom-out-up">
+            <img class="skills__card-img" src="./assets/images/git.svg" alt="icon skill">
+            <span class="skills__card-title">GIT</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="sections__section services" id="services">
+      <h2 class="services__h2 artistic-text artistic-text--responsive" data-aos="zoom-out-right">Services</h2>
+      <ul class="services__list">
+        <li class="services__item" data-aos="fade-up">
+          <div class="services__content">
+            <i class='services__icon bx bx-code-alt bx-flip-vertical bx-tada' undefined ></i>
+            <span class="services__title">Frontend Web Programming</span>
+            <p class="services__description">Development of sites and applications for web platforms. I help you build your project from start to finish: frontend, backend and database.</p>
+          </div>
+        </li>
+        <li class="services__item" data-aos="fade-up">
+          <div class="services__content">
+            <i class='services__icon bx bxs-devices bx-tada bx-flip-vertical' ></i>
+            <span class="services__title">Web Design and Layout</span>
+            <p class="services__description">Prototype and mock up your static designs and convert them into amazing responsive, optimal and accessible web sites and applications.</p>
+          </div>
+        </li>
+        <li class="services__item" data-aos="fade-up">
+         <div class="services__content">
+           <i class='services__icon bx bx-loader-circle bx-spin' ></i>
+           <span class="services__title">Web Performance Optimization</span>
+           <p class="services__description">I make your sites and web applications improve their load and response time.</p>
+         </div>
+        </li>
+        <li class="services__item" data-aos="fade-up">
+          <div class="services__content">
+            <i class='services__icon bx bx-search-alt-2 bx-tada' ></i>
+            <span class="services__title">Search Engine Optimisation</span>
+            <p class="services__description">🔎 I optimize your sites and web applications so that they improve your position in search engines.</p>
+          </div>
+        </li>
+        <li class="services__item" data-aos="fade-up">
+          <div class="services__content">
+            <i class='services__icon bx bx-hash bx-burst bx-rotate-90' ></i>
+            <span class="services__title">Social Media Optimization
+              and Content Marketing</span>
+            <p class="services__description">📢 I help you choose the right digital channels to reach your ideal audience.</p>
+          </div>
+        </li>
+        <li class="services__item" data-aos="fade-up">
+          <div class="services__content">
+            <i class='services__icon bx bx-server bx-tada' ></i>
+            <span class="services__title">Web Hosting</span>
+            <p class="services__description">Don't you have a domain and web hosting for your project? 😲
+              Don't worry about those technical things, I'll take care of it. 😉</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="sections__section portfolio" id="portfolio">
+      <h2 class="portfolio__h2 artistic-text artistic-text--responsive" data-aos="zoom-out-right">Portfolio</h2>
+      <div class="portfolio__works cards">
+        <div class="card">
+          <img src="./assets/images/webProgramming.jpg" alt="" class="card__cover">
+          <div class="card__content">
+            <h3 class="card__title">Title</h3>
+            <div class="card__techs">
+              <span class="card__tech">Tech 1</span>
+              <span class="card__tech">Tech 2</span>
+              <span class="card__tech">Tech 3</span>
+            </div>
+            <p class="card__description">Galería de diplomas obtenidos a lo largo de mi carrera profesional desempeñándome como desarrollador de software.</p>
+            <div class="card__links">
+              <a href="" class="card__link btn"><i class='bx bxl-github'></i> Repository</a>
+              <a href="" class="card__link btn"><i class='bx bx-link-external'></i> Online</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/images/WebHosting.png" alt="" class="card__cover">
+          <div class="card__content">
+            <h3 class="card__title">Title</h3>
+            <div class="card__techs">
+              <span class="card__tech">Tech 1</span>
+              <span class="card__tech">Tech 2</span>
+              <span class="card__tech">Tech 3</span>
+            </div>
+            <p class="card__description">Galería de diplomas obtenidos a lo largo de mi carrera profesional desempeñándome como desarrollador de software.</p>
+            <div class="card__links">
+              <a href="" class="card__link btn"><i class='bx bxl-github'></i> Repository</a>
+              <a href="" class="card__link btn"><i class='bx bx-link-external'></i> Online</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/images/webDesigner.jpg" alt="" class="card__cover">
+          <div class="card__content">
+            <h3 class="card__title">Title</h3>
+            <div class="card__techs">
+              <span class="card__tech">Tech 1</span>
+              <span class="card__tech">Tech 2</span>
+              <span class="card__tech">Tech 3</span>
+            </div>
+            <p class="card__description">Galería de diplomas obtenidos a lo largo de mi carrera profesional desempeñándome como desarrollador de software.</p>
+            <div class="card__links">
+              <a href="" class="card__link btn"><i class='bx bxl-github'></i> Repository</a>
+              <a href="" class="card__link btn"><i class='bx bx-link-external'></i> Online</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/images/webProgramming.jpg" alt="" class="card__cover">
+          <div class="card__content">
+            <h3 class="card__title">Title</h3>
+            <div class="card__techs">
+              <span class="card__tech">Tech 1</span>
+              <span class="card__tech">Tech 2</span>
+              <span class="card__tech">Tech 3</span>
+            </div>
+            <p class="card__description">Galería de diplomas obtenidos a lo largo de mi carrera profesional desempeñándome como desarrollador de software.</p>
+            <div class="card__links">
+              <a href="" class="card__link btn"><i class='bx bxl-github'></i> Repository</a>
+              <a href="" class="card__link btn"><i class='bx bx-link-external'></i> Online</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/images/webProgramming.jpg" alt="" class="card__cover">
+          <div class="card__content">
+            <h3 class="card__title">Title</h3>
+            <div class="card__techs">
+              <span class="card__tech">Tech 1</span>
+              <span class="card__tech">Tech 2</span>
+              <span class="card__tech">Tech 3</span>
+            </div>
+            <p class="card__description">Galería de diplomas obtenidos a lo largo de mi carrera profesional desempeñándome como desarrollador de software.</p>
+            <div class="card__links">
+              <a href="" class="card__link btn"><i class='bx bxl-github'></i> Repository</a>
+              <a href="" class="card__link btn"><i class='bx bx-link-external'></i> Online</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/images/webProgramming.jpg" alt="" class="card__cover">
+          <div class="card__content">
+            <h3 class="card__title">Title</h3>
+            <div class="card__techs">
+              <span class="card__tech">Tech 1</span>
+              <span class="card__tech">Tech 2</span>
+              <span class="card__tech">Tech 3</span>
+            </div>
+            <p class="card__description">Galería de diplomas obtenidos a lo largo de mi carrera profesional desempeñándome como desarrollador de software.</p>
+            <div class="card__links">
+              <a href="" class="card__link btn"><i class='bx bxl-github'></i> Repository</a>
+              <a href="" class="card__link btn"><i class='bx bx-link-external'></i> Online</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <footer class="footer" id="contact">
+      <h2 class="footer__title artistic-text">
+        Contacto
+      </h2>
+      <a class="footer__mail" href="http://" target="_blank" rel="noopener noreferrer">Envía un correo</a>
+      <div class="footer__ssmm ssmm">
+        <a href="https://www.linkedin.com/in/dianacruzpro/" target="_blank" class="ssmm__a">
+          <svg class="ssmm__svg" stroke-width="1.5" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" color="transparent">
+            <path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <a href="https://github.com/dianacruzpro" target="_blank" class="ssmm__a">
+          <svg class="ssmm__svg" stroke-width="1.5" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" color="transparent">
+            <path d="M16 22.027v-2.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 00-1.5-3.75 5.07 5.07 0 00-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 00-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 005 5.797a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 00-.94 2.58v2.87M9 20.027c-3 .973-5.5 0-7-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/coding_girl503/" target="_blank" class="ssmm__a">
+          <svg class="ssmm__svg" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" color="transparent">
+            <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3 16V8a5 5 0 015-5h8a5 5 0 015 5v8a5 5 0 01-5 5H8a5 5 0 01-5-5z" stroke-width="1.5"></path><path d="M17.5 6.51l.01-.011" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        
+      </div>
+    </footer>
+  </main>
+  
+  
+  
+</body>
+</html>

@@ -1,0 +1,20 @@
+@use '../util/' as *;
+
+.container{
+  max-width: 87.5rem;
+  padding: 0 1.5625rem;
+  margin: 0 auto 2.8125rem;
+  
+  @include breakpoint(large){
+    padding:0 2rem;
+  }
+}
+
+.sections{
+  &__section{
+    min-height: 100vh;
+  }
+}
+
+
+

@@ -1,0 +1,26 @@
+@use '../util/' as *;
+.ssmm{
+  @include flexbox(row, nowrap, space-evenly, center,.5rem);
+  padding: 2.5rem 0;
+  border-top: .125rem solid var(--color-theme);
+  @include breakpoint(standard){
+    border-top: none;
+    justify-content: flex-end;
+    width: 12rem;
+    padding: 1rem 0;
+  }
+
+  &__svg{
+    max-height: 1.875rem;
+    stroke: var(--color-text);
+    transition: .3s ease-in-out;
+
+    &:hover{
+      stroke: var(--main-color);
+    }
+    &--linkedin{}
+    &--github{}
+    &--instagram{}
+  }
+    
+}

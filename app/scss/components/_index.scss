@@ -1,0 +1,277 @@
+@use '../util/' as *;
+@forward 'header.scss';
+@forward 'nav.scss';
+@forward 'ssmm.scss';
+@forward 'toggler.scss';
+@forward 'btn.scss';
+@forward 'card.scss';
+
+.shape{
+  display: none;
+  position: fixed;
+  z-index: -1;
+  opacity: .1;
+  filter: blur(.5rem);
+  height: 100vh;
+  width: 300vw;
+  object-fit: cover;
+  object-position: 75%;
+  transition: .4s ease-in-out;
+  @include breakpoint(medium){
+    width: 100%;
+    filter: blur(1rem);
+    object-position: center;
+    opacity: .4;
+    mix-blend-mode: lighten;
+  }
+}
+
+.home{
+  @include breakpoint(medium){
+    @include flexbox(row,nowrap, center, center);
+  }
+  &__content{
+    height: 100vh;
+    @include flexbox(column, nowrap, center, flex-start);
+
+    @include breakpoint(medium){
+      flex: 1 1 150%;
+    }
+
+    @include breakpoint(large){
+      @include flexbox(column, nowrap, center, flex-start);
+      flex:1 1 90%;
+    }
+    
+    &-span{
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    &-h1{
+      font-size: 16vw;
+      line-height: 100%;
+      background-image:linear-gradient(to right, #00C056, #0ece64, #2ad677,#48ef93,#24ad86,#32cba0, #40c9a2, #00C056);
+      background-size:400% auto;
+      animation:move 8s linear infinite;
+      animation-delay:3s;
+      
+      @include breakpoint(medium){
+        font-size: 6.8rem;
+      }
+      @include breakpoint(large){
+        font-size: 7.5rem;
+      }
+    }
+    
+    @keyframes move{to{background-position:400% center}}
+    
+    &-h2{
+      font-size: 7.3vw;
+      font-weight: 700;
+      
+      @include breakpoint(medium){
+        font-size: 3rem;
+      }
+      @include breakpoint(large){
+        font-size: 3.3rem;
+      }
+      
+    }
+    &-p{
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-top: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      @include breakpoint(large){
+        font-size: 1.125rem;
+        margin-top: 3rem;
+      }
+      &--2{
+        font-weight: 200;
+        font-style: italic;
+        @include breakpoint(large){
+          font-size: 1.125rem;
+        }
+      }
+    }
+    &-btn{}
+
+    &-studying{
+      width: 100%;
+      margin-top: 2rem;
+
+      @include breakpoint(medium){
+        display: none;
+      }
+    }
+    &-learningtext{}
+
+    @keyframes rotate {
+      0%{transform: rotate(0deg);}
+      100%{transform: rotate(175deg);}
+    }
+    &-learningtech{
+      max-width: 5rem;
+      margin: 2rem auto 0;
+      animation: rotate 6s ease-in-out infinite alternate;
+    }
+  }
+  
+  &__cover{
+    &-picture{}
+    &-img{
+      // max-width: 20rem;
+      max-width: fit-content;
+      width: 100%;
+
+      @include breakpoint(large){
+        max-width: fit-content;
+        width: 32rem;
+      }
+    }
+  }
+}
+
+.about{
+
+  &__content{
+    @include breakpoint(medium){
+      @include flexbox(row, nowrap, center, center, 1rem);
+    }
+    @include breakpoint(large){
+      gap: 4rem;
+    }
+  }
+  &__text{}
+  &__h2{}
+  &__img{
+    // width: 100%;
+    max-width: 25rem;
+    min-width: 18rem;
+    margin: 0 auto;
+
+    @include breakpoint(medium){
+      max-width: 30rem;
+    }
+  }
+  &__p{
+    font-size: 1rem;
+    line-height: 1.125rem;
+    margin-bottom: 1rem;
+    font-weight: 200;
+  }
+  &__btn{}
+  &__skills{}
+}
+
+.skills{
+  margin-top: 4rem;
+  &__h2{}
+  &__cards{
+    @include flexbox(row, wrap, space-evenly, center,1rem);
+  }
+  &__card{
+    border-radius: 1rem;
+    background: var(--card-color);
+    max-width: 7rem;
+    padding: 1rem;
+    @include flexbox(column, nowrap, center, center,1rem);
+
+    @include breakpoint(large){
+      max-width: 8rem;
+    }
+
+    &-img{}
+    &-title{}
+  }
+}
+
+.services{
+  margin-top: 3rem;
+  @include breakpoint(medium){
+    min-height: auto;
+  }
+  &__h2{}
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-content: center;
+    
+    @include breakpoint(standard){
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.8rem;
+    }
+    @include breakpoint(large){
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1.8rem;
+    }
+  }
+  &__item{
+    border-radius: 2rem;
+    background: var(--card-color);
+  }
+  
+  &__content{
+    @include flexbox(column, wrap,flex-start,start,1rem);
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  &__icon{
+    font-size: 2rem;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--main-color);
+  }
+  &__description{
+    font-weight: 100;
+  }
+}
+
+.portfolio{
+  margin-top: 3rem;
+  &__works{}
+}
+
+.footer{
+  width: 100%;
+  margin-top: 3rem;
+  @include flexbox(column, nowrap, center, center,1rem);
+  transition: .3s ease-in-out;
+  
+  @include breakpoint(medium){
+    @include flexbox(row, nowrap, space-between, center);
+    height: 3rem;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    background: var(--card-color);
+    padding: 3rem 1rem;
+    border-radius: 1rem;
+  }
+  
+  &__title{
+    font-size: 5rem; 
+    line-height: 4.5rem;
+    @include breakpoint(medium){
+      font-size: 4rem; 
+      line-height: 3.5rem;
+    }
+  }
+  &__mail{
+    font-weight: 100;
+    font-size: 1rem;
+    transition: .3s ease-in-out;
+    
+    &:hover{
+      font-weight: 700;
+      color: var(--main-color);
+    }
+  }
+  &__ssmm{}
+}

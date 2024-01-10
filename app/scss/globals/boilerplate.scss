@@ -1,0 +1,72 @@
+@use '../util/' as *;
+@media (prefers-reduced-motion: reduce) {
+  * {animation: none;transition: none;}
+}
+
+*, *::before,*::after{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+html{scroll-behavior: smooth;}
+
+table,tr,td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--font-family-1);
+  color:var(--color-text);
+  background: var(--bg);
+  line-height: 1.4em; 
+  font-smooth: always; 
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
+  transition:.5s ease-in-out;
+  position: relative;
+}
+
+
+.artistic-text{
+  font-family: var(--font-family-2);
+  background: linear-gradient(var(--main-color) 35%,var(--bg) 88%);
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  &--responsive{
+    font-size: 16vw;
+    line-height: 100%;
+    @include breakpoint(medium){
+      font-size: 5rem;
+    }
+    @include breakpoint(large){
+      font-size: 7.5rem;
+    }
+  }
+}
+
+

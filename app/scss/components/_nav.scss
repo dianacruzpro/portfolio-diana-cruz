@@ -1,0 +1,62 @@
+@use '../util/' as *;
+
+.nav{
+  &__ul{
+    @include flexbox(column, nowrap, center, center,1rem);
+    @include breakpoint(standard){
+      animation: none;
+      opacity: 1;
+      flex-direction: row;
+    }
+  }
+  &__li{
+    @include flexbox(column, nowrap, center, center);
+    opacity: 0;
+    width: 100%;
+    animation: disappear-animation .5s forwards;
+    @include breakpoint(standard){
+      animation: none;
+      opacity: 1;
+      width: auto;
+    }
+  }
+  &__a{
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    text-align: center;
+    transition: .3s ease-in-out;
+    @include breakpoint(standard){
+      width: auto;
+      padding: 1.5rem 1rem;
+    }
+    &:hover{
+      color:var(--main-color);
+    }
+    &--active{
+      color:var(--main-color);
+      font-weight: 700;
+    }
+  }
+  
+}
+
+@keyframes appear-animation {
+	0% {
+		transform: translatey(-.75rem);
+    opacity: 0;
+	}
+	100% {
+		transform: translatey(0px);
+    opacity: 1;
+	}
+}
+@keyframes disappear-animation {
+	0% {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+	100% {
+    opacity: 0;
+	}
+}

@@ -1,0 +1,24 @@
+@use '../util/' as *;
+
+.btn{
+  font-size: 1.125rem;
+  @include flexbox(row, nowrap, center, center,1rem);
+  line-height: 1.125rem;
+  background: var(--main-color);
+  border-radius:2rem;
+  padding: .75rem 2.25rem;
+  margin-top: 2rem;
+  transition: .3s ease-in-out;
+  
+  &__svg{
+    max-width: 1.5rem;
+  }
+}
+
+.btn:hover{
+  box-shadow: var(--box-shadow);
+  transform: scale(1.02);
+  &__svg{
+
+  }
+}

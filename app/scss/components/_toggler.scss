@@ -1,0 +1,144 @@
+@use '../util/' as *;
+.toggler{
+  position: fixed;
+  bottom:0;
+  right:0;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  margin: 0 1.5rem 1.5rem 0;
+  border: 2px solid var(--main-color);
+  box-shadow: var(--box-shadow);
+  background: var(--bg);
+	z-index: 2;
+	transition: .4s ease-in-out;
+  &__burger{}
+	@include breakpoint(standard){
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.toggler.close{
+  background: var(--main-color);
+}
+
+.burger{
+  // position: relative;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+
+  &__line{
+    position: absolute;
+    width: 60%;
+    height: .3rem;
+    background-color: var(--color-text);
+    border-radius: .25rem;
+    box-shadow: var(--box-shadow);
+  }
+}
+
+.line-one {
+	width: 35%;
+	animation: line-one-animation .6s forwards;
+}
+
+.line-two {
+	animation: line-two-animation .6s forwards;
+}
+
+.line-three {
+	width: 35%;
+	animation: line-three-animation .6s forwards;
+}
+
+.burger.close .line-one {
+	animation: line-one-close-animation .6s forwards;
+}
+
+.burger.close .line-two {
+	animation: line-two-close-animation .6s forwards;
+}
+
+.burger.close .line-three {
+	animation: line-three-close-animation .6s forwards;
+}
+
+@keyframes line-one-close-animation {
+	0% {
+		transform: translatey(-.75rem);
+	}
+	50% {
+		transform: translatey(0px);
+	}
+	100% {
+		width: 50%;
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes line-two-close-animation {
+	0% {
+		transform: scale(100%);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+@keyframes line-three-close-animation {
+	0% {
+		transform: translatey(.75rem);
+	}
+	50% {
+		transform: translatey(0px) rotate(0deg);
+	}
+	100% {
+		width: 50%;
+		transform: rotate(135deg);
+	}
+}
+
+@keyframes line-one-animation {
+	0% {
+		width: 50%;
+		transform: rotate(45deg);
+	}
+	50% {
+		transform: translatey(0px) rotate(0deg);
+	}
+	100% {
+		width: 35%;
+		transform: translatey(-.75rem);
+	}
+}
+
+@keyframes line-two-animation {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(100%);
+	}
+}
+
+@keyframes line-three-animation {
+	0% {
+		width: 50%;
+		transform: rotate(135deg);
+	}
+	50% {
+		transform: translatey(0px) rotate(0deg);
+	}
+	100% {
+		width: 35%;
+		transform: translatey(.75rem);
+	}
+	
+	
+}

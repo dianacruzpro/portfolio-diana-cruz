@@ -1,5 +1,4 @@
-//Initialize modules
-const {src, dest, watch, series } = require("gulp");
+const {src, dest, watch, series} = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -7,6 +6,7 @@ const cssnano = require("cssnano");
 const babel = require("gulp-babel");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
+
 
 //sass task
 function scssTask(){
@@ -56,3 +56,4 @@ function watchTask(){
 
 //Default Gulp Task
 exports.default = series(scssTask,jsTask,browserSyncServer,watchTask);
+//export { _default as default };
